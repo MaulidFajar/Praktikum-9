@@ -1,14 +1,11 @@
-import javax.print.attribute.HashPrintRequestAttributeSet;
-import javax.swing.AbstractAction;
 
 // Nama   : Muhammad Maulid Fajar
 // NIM    : G.111.20.0040
 // Matkul : Pemrograman Berorientasi Objek
 
-public abstract class Peminjam implements UserLogin {
+public abstract class Peminjam extends Denda implements UserLogin {
   private boolean isLogin;
   private boolean isAntiDenda;
-
   @Override
   public void doLogin() {
     this.isLogin = true;
