@@ -1,9 +1,13 @@
+import javax.print.attribute.HashPrintRequestAttributeSet;
+import javax.swing.AbstractAction;
+
 // Nama   : Muhammad Maulid Fajar
 // NIM    : G.111.20.0040
 // Matkul : Pemrograman Berorientasi Objek
 
 public abstract class Peminjam implements UserLogin {
   private boolean isLogin;
+  private boolean isAntiDenda;
 
   @Override
   public void doLogin() {
@@ -20,6 +24,18 @@ public abstract class Peminjam implements UserLogin {
     return this.isLogin;
   }
 
+  public void addAntiDenda() {
+    this.isAntiDenda = false;
+  }
+
+  public void removeAntiDenda() {
+    this.isAntiDenda = true;
+  }
+
+  public boolean getAntiDenda(){
+    return this.isAntiDenda;
+  }
+  
   public abstract void setKodePeminjam(String kodePeminjam);
   public abstract String getKodePeminjam();
   public abstract void setNamaPeminjam(String namaPeminjam);

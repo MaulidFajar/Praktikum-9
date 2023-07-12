@@ -2,7 +2,7 @@
 // NIM    : G.111.20.0040
 // Matkul : Pemrograman Berorientasi Objek
 
-public class Peminjaman {
+public class Peminjaman{
 
   private Peminjam peminjam;
   private Petugas petugas;
@@ -38,5 +38,7 @@ public class Peminjaman {
   public Buku getBuku() {
     return this.buku;
   }
+
+
 
 }
