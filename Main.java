@@ -6,23 +6,23 @@ public class Main {
 
   public static void main(String[] args) {
 
-    Buku buku1 = new Buku("B001", "Pemrograman Java");
-    BukuLuar buku2 = new BukuLuar("B002", "Naruto");
-    Petugas petugas1 = new Petugas("fajar", "001");
+    Buku buku1 = new Buku("B001", "Harry Potter");
+    BukuLuar buku2 = new BukuLuar("B002", "One Piece");
+    Petugas petugas1 = new Petugas("maulid", "001");
     Peminjam mhs1 = new Mahasiswa();
-    mhs1.setNamaPeminjam("jafar");
+    mhs1.setNamaPeminjam("muhfajar");
     mhs1.setKodePeminjam("M001");
 
     mhs1.doLogin();
     // mhs1.doLogout();
 
 
-    Buku buku3 = new Buku("B001", "Pemrograman Java");
-    BukuLuar buku4 = new BukuLuar("B002", "Naruto");
-    Petugas petugas2 = new Petugas("fajar", "001");
+    Buku buku3 = new Buku("B003", "Pemrograman Java");
+    BukuLuar buku4 = new BukuLuar("B004", "Naruto");
+    Petugas petugas2 = new Petugas("fajar", "002");
     Peminjam mhs2 = new Mahasiswa();
     mhs2.setNamaPeminjam("jafar");
-    mhs2.setKodePeminjam("M001");
+    mhs2.setKodePeminjam("M002");
 
     mhs2.doLogin();
     Peminjaman peminjaman1 = new Peminjaman(mhs1, petugas1, buku1);
@@ -47,14 +47,15 @@ public class Main {
 
           System.out.println("=== Denda Dihapuskan ===");
 
-          mhs1.addAntiDenda();
+          mhs2.addAntiDenda();
 
           System.out.println("Tagihan Denda : " + denda2.getTagihan());
 
           System.out.println("=== Denda Ditambahkan ===");
 
-          mhs1.removeAntiDenda();
+          mhs2.removeAntiDenda();
           System.out.println("Tagihan Denda : " + denda2.getTagihan());
+          
       } catch(Exception e) {
           System.out.println("Terjadi Kesalahan : " + e.getMessage());
       } finally {
